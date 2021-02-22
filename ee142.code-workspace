@@ -11,5 +11,8 @@
 			"path": "/mingw64/bin:/usr/bin"
 		},
 		"files.autoSave": "afterDelay",
+	},
+	"extensions": {
+		"recommendations": ["ms-vscode.cpptools"]
 	}
 }
