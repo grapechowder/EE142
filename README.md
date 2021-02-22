@@ -1,4 +1,5 @@
-#EE142
+# EE142
+
 This repository contains the files needed for the programming projects in EE 142 C++ and Object Oriented Programming at VMI, including
 
 - VS Code workspace and configuration files
