@@ -1,0 +1,55 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build current project",
+            "type": "shell",
+            "command": "g++",
+            "windows": {
+                "args": [
+                    "-g", 
+                    "-std=c++17",
+                    "-IVMIGameEngine/include",
+                    "${relativeFileDirname}/*.cpp", 
+                    "-o", "${relativeFileDirname}/build/${relativeFileDirname}.exe", 
+                    "-lsfml-graphics", "-lsfml-window", "-lsfml-system"
+                ]
+            },
+            "osx": {
+                "args": [
+                    "-g",
+                    "-std=c++17",
+                    "-IVMIGameEngine/include",
+                    "${relativeFileDirname}/*.cpp",
+                    "-o", "${relativeFileDirname}/build/${relativeFileDirname}",
+                    "-lsfml-graphics", "-lsfml-window", "-lsfml-system"
+                ]
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": ["$gcc"],
+            "dependsOrder": "sequence",
+            "dependsOn": "Create build directory",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Create build directory",
+            "type": "shell",
+            "command": "mkdir",
+            "args": [
+                "-p",
+                "${relativeFileDirname}/build"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
