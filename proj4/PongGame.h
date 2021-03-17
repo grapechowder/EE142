@@ -1,7 +1,7 @@
 // Our Pong Game
 #pragma once
 
-#include <VMIGame/Game.hpp>
+#include <Game.hpp>
 
 #include "Ball.h"
 #include "Wall.h"

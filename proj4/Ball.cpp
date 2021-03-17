@@ -1,11 +1,11 @@
 // Class to represent our ball.
 
-#include <VMIGame/MovingThing.hpp>
-#include <VMIGame/Thing.hpp>
-#include <VMIGame/Vector2d.hpp>
-#include <VMIGame/PolygonShape.hpp>
-#include <VMIGame/Color.hpp>
-#include <VMIGame/Timer.hpp>
+#include <MovingThing.hpp>
+#include <Thing.hpp>
+#include <Vector2d.hpp>
+#include <PolygonShape.hpp>
+#include <Color.hpp>
+#include <Timer.hpp>
 
 #include "Ball.h"
 #include "Wall.h"

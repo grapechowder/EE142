@@ -12,6 +12,7 @@
                     "-g", 
                     "-std=c++17",
                     "-IVMIGameEngine/include",
+                    "-IVMIGameEngine/include/VMIGame",
                     "${relativeFileDirname}/*.cpp", 
                     "-o", "${relativeFileDirname}/build/${relativeFileDirname}.exe", 
                     "-lsfml-graphics", "-lsfml-window", "-lsfml-system"
@@ -22,6 +23,7 @@
                     "-g",
                     "-std=c++17",
                     "-IVMIGameEngine/include",
+                    "-IVMIGameEngine/include/VMIGame",
                     "${relativeFileDirname}/*.cpp",
                     "-o", "${relativeFileDirname}/build/${relativeFileDirname}",
                     "-lsfml-graphics", "-lsfml-window", "-lsfml-system"

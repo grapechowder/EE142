@@ -1,6 +1,10 @@
 {
     "env": {
-      "myDefaultIncludePath": ["${workspaceFolder}", "${workspaceFolder}/VMIGameEngine/include"]
+      "myDefaultIncludePath": [
+        "${workspaceFolder}", 
+        "${workspaceFolder}/VMIGameEngine/include",
+        "${workspaceFolder}/VMIGameEngine/include/VMIGame"
+      ]
     },
     "configurations": [
       {

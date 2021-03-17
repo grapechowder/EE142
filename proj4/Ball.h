@@ -2,8 +2,8 @@
 
 #pragma once
 
-#include <VMIGame/MovingThing.hpp>
-#include <VMIGame/Thing.hpp>
+#include <MovingThing.hpp>
+#include <Thing.hpp>
 
 class Ball :
 	public vmi::MovingThing

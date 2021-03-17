@@ -2,8 +2,8 @@
 
 #pragma once
 
-#include <VMIGame/Thing.hpp>
-#include <VMIGame/Vector2d.hpp>
+#include <Thing.hpp>
+#include <Vector2d.hpp>
 
 class Wall :
 	public vmi::Thing

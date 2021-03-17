@@ -1,9 +1,9 @@
 // Class to represent the walls in our Pong game
 
-#include <VMIGame/Vector2d.hpp>
-#include <VMIGame/Thing.hpp>
-#include <VMIGame/PolygonShape.hpp>
-#include <VMIGame/Color.hpp>
+#include <Vector2d.hpp>
+#include <Thing.hpp>
+#include <PolygonShape.hpp>
+#include <Color.hpp>
 
 #include "Wall.h"
 

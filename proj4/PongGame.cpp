@@ -1,8 +1,8 @@
 // Our Pong Game
-#include <VMIGame/Game.hpp>
-#include <VMIGame/Vector2d.hpp>
-#include <VMIGame/Keyboard.hpp>
-#include <VMIGame/Color.hpp>
+#include <Game.hpp>
+#include <Vector2d.hpp>
+#include <Keyboard.hpp>
+#include <Color.hpp>
 
 #include "PongGame.h"
 #include "Ball.h"
