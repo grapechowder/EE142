@@ -1,5 +1,5 @@
 // Class for working with sprite-based shapes
-
+#pragma once
 #ifndef VMI_GAME_SPRITE_SHAPE_H
 #define VMI_GAME_SPRITE_SHAPE_H
 
@@ -23,7 +23,9 @@ public:
     
     // draw the sprite
     void draw(sf::RenderTarget& target, sf::RenderStates states) const {
+#ifndef ZYBOOKS        
         target.draw(sprite, states);
+#endif        
     }
     
     // get a bounding box around the shape
@@ -101,7 +103,7 @@ inline SpriteShape& SpriteShape::operator=(const SpriteShape& rtSide)
             sprite.setTexture(*texture);
         }
     }
-    
+
     return *this;
 }
 

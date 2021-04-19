@@ -1,5 +1,5 @@
 // Text that can be drawn to a window
-
+#pragma once
 #ifndef VMI_GAME_TEXT_H
 #define VMI_GAME_TEXT_H
 
@@ -63,6 +63,7 @@ private:
     sf::Text shape;                 // SFML shape
 
     void loadDefaultFont() {
+#ifndef ZYBOOKS        
         if (font == nullptr) {
             font = new sf::Font();
 
@@ -72,6 +73,7 @@ private:
             // didn't find one, so hope it's in the right dir
             font->loadFromFile("./VMIGameEngine/resource/sansation.ttf");
         }
+#endif        
     }
 
     static inline sf::Font *font = nullptr;

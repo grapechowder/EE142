@@ -1,5 +1,5 @@
 // Abstract class for representing a shape
-
+#pragma once
 #ifndef VMI_GAME_SHAPE_H
 #define VMI_GAME_SHAPE_H
 

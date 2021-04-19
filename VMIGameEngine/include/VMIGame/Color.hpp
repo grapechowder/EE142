@@ -1,4 +1,5 @@
 // enum for specifying colors
+#pragma once
 #ifndef VMI_GAME_COLOR_H
 #define VMI_GAME_COLOR_H
 

@@ -1,5 +1,5 @@
 // Abstract base class for game logic, including window creation and management.
-
+#pragma once
 #ifndef VMI_GAME_GAME_H
 #define VMI_GAME_GAME_H
 
@@ -94,6 +94,7 @@ inline Game::Game(std::string _name, int width, int height) : name(_name)
 // Game loop
 inline void Game::playGame()
 {
+#ifndef ZYBOOKS
     sf::Clock clock;            // clock for measuring frame time
     
     // game loop -- repeat until game ends or window is closed
@@ -134,6 +135,7 @@ inline void Game::playGame()
     
     // game is over, so delete the window
     delete window;
+#endif    
 
 }
 
@@ -154,6 +156,7 @@ inline const BoundingBox Game::getBounds()
 // Display a text message and wait for user keypress
 inline Key Game::createMessage(std::string msgText, Vector2d position, int charSize, Color color)
 {
+#ifndef ZYBOOKS    
     // display message
     Text msg(msgText, position);
     msg.setCharacterSize(charSize);
@@ -180,6 +183,9 @@ inline Key Game::createMessage(std::string msgText, Vector2d position, int charS
     }
     
     return key;
+#else
+    return Key::Space;
+#endif        
 }
 
 } // namespace vmi

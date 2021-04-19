@@ -1,6 +1,6 @@
 // Class to represent a bounding box around an object. Bounding boxes can be used
 // for collision detection.
-
+#pragma once
 #ifndef VMI_GAME_BOUNDING_BOX_H
 #define VMI_GAME_BOUNDING_BOX_H
 

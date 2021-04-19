@@ -1,3 +1,4 @@
+#pragma once
 #ifndef VMI_GAME_VECTOR_H
 #define VMI_GAME_VECTOR_H
 

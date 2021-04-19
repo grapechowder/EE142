@@ -4,6 +4,7 @@
 // we can build more complicated shapes -- each point doesn't need to be connected
 // to the previous one. We can pick the pen up between segments when drawing.
 
+#pragma once
 #ifndef VMI_GAME_VERTEX_SHAPE_H
 #define VMI_GAME_VERTEX_SHAPE_H
 
@@ -35,9 +36,11 @@ public:
     
     void draw(sf::RenderTarget& target, sf::RenderStates states) const {
         // draw each vertex array
+#ifndef ZYBOOKS        
         for (auto it = vertices.begin(); it != vertices.end(); ++it) {
             target.draw(*it, states);
         }
+#endif        
     }
     
     const BoundingBox getBounds() const { return box; }

@@ -1,5 +1,5 @@
 // Codes for handling the mouse buttons.
-
+#pragma once
 #ifndef VMI_GAME_MOUSE_H
 #define VMI_GAME_MOUSE_H
 

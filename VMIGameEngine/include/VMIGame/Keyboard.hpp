@@ -1,3 +1,4 @@
+#pragma once
 #ifndef VMI_GAME_KEYBOARD_H
 #define VMI_GAME_KEYBOARD_H
 
