@@ -46,7 +46,7 @@ namespace sf
 	class Vector2f
 	{
 	public:
-		Vector2f() {}
+		Vector2f() :x(0), y(0) {}
 		Vector2f(float _x, float _y) : x(_x), y(_y) {}
 
 		float x;
@@ -79,17 +79,20 @@ namespace sf
 	{
 	public:
 		Transform() : x(0), y(0) {}
-		void translate(float _x, float _y)
+		Transform& translate(float _x, float _y)
 		{
 			x = _x;
 			y = _y;
+			return *this;
 		}
-		void scale(float scaleX, float scaleY, float x, float y) {}
-		void rotate(float angle, float x, float y) {}
+		Transform& scale(float scaleX, float scaleY, float x, float y) { return *this; }
+		Transform& scale(float scaleX, float scaleY) { return *this; }
+		Transform& rotate(float angle, float x, float y) { return *this; }
 		sf::FloatRect transformRect(sf::FloatRect rect)
 		{
 			return sf::FloatRect(rect.left + x, rect.top + y, rect.width, rect.height);
 		}
+		sf::Vector2f transformPoint(float x, float y) { return sf::Vector2f(x, y); }
 
 		float x;
 		float y;
@@ -100,6 +103,7 @@ namespace sf
 	public:
 		Color() {}
 		Color(Uint32 c) {}
+		Uint32 toInteger() const { return 0; }
 	};
 
 	class Font
@@ -119,8 +123,9 @@ namespace sf
 		bool loadFromFile(std::string filename)
 		{
 			size_t last = filename.find_last_of("/\\");
-			if (last != std::string::npos) filename = filename.substr(last+1);
-		
+			if (last != std::string::npos)
+				filename = filename.substr(last + 1);
+
 			std::ifstream is(filename, std::ifstream::in | std::ifstream::binary);
 			if (is)
 			{
@@ -143,7 +148,6 @@ namespace sf
 			}
 			else
 				return false;
-
 		}
 
 		Vector2i size;
@@ -181,6 +185,33 @@ namespace sf
 		void setCharacterSize(int newSize) {}
 		void setFillColor(sf::Color color) {}
 		void setOutlineColor(sf::Color color) {}
+	};
+
+	class Vertex
+	{
+	public:
+		Vertex() {}
+		Vertex(const sf::Vector2f &_position, const sf::Color &_color) : position(_position), color(_color) {}
+
+		sf::Vector2f position;
+		sf::Color color;
+	};
+
+	enum PrimitiveType
+	{
+		LinesStrip
+	};
+
+	class VertexArray : public Shape
+	{
+	public:
+		VertexArray(sf::PrimitiveType type) {}
+		void append(sf::Vertex v) {}
+		unsigned int getVertexCount() const { return 0; }
+		const sf::Vertex &operator[](std::size_t idx) const { return array[0]; }
+
+	private:
+		sf::Vertex array[1];
 	};
 
 	class VideoMode
@@ -362,7 +393,7 @@ namespace sf
 		sf::FloatRect getLocalBounds() const
 		{
 			return sf::FloatRect(0, 0, texture.size.x, texture.size.y);
-//			return sf::FloatRect(0, 0, 10, 10);
+			//			return sf::FloatRect(0, 0, 10, 10);
 		}
 		void setTexture(sf::Texture _texture) { texture = _texture; }
 		void draw(sf::RenderTarget &target, RenderStates states) {}
