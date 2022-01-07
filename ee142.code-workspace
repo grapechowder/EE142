@@ -5,14 +5,23 @@
 		}
 	],
 	"settings": {
-		"terminal.integrated.automationShell.windows": "c:/msys64/usr/bin/bash.exe",
-		"terminal.integrated.shell.windows": "c:/msys64/usr/bin/bash.exe",
+		"terminal.integrated.profiles.windows": {
+			"bash" : {
+				"path" : "c:/msys64/usr/bin/bash.exe"
+			}
+		},
+		"terminal.integrated.defaultProfile.windows": "bash",
 		"terminal.integrated.env.windows": {
 			"path": "/mingw64/bin:/usr/bin"
 		},
 		"files.autoSave": "afterDelay",
 	},
 	"extensions": {
-		"recommendations": ["ms-vscode.cpptools"]
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"jeff-hykin.better-cpp-syntax",
+			"ms-vscode.cpptools-extension-pack",
+			"ms-vscode.cpptools-themes"
+		]
 	}
 }
