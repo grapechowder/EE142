@@ -5,6 +5,7 @@
 
 
 #include <set>
+#include <typeinfo>
 #include "Graphics.hpp"
 
 #include "Vector2d.hpp"

@@ -9,10 +9,11 @@
     "configurations": [
       {
         "name": "Win32",
-        "intelliSenseMode": "gcc-x64",
+        "intelliSenseMode": "windows-gcc-x64",
         "includePath": ["${myDefaultIncludePath}"],
         "cStandard": "c11",
         "cppStandard": "c++17",
+        "compilerArgs" : ["-fno-ms-extensions"],
         "browse": {
           "path": ["${workspaceFolder}"],
           "limitSymbolsToIncludedHeaders": true,
@@ -21,7 +22,7 @@
       },
       {
         "name": "Mac",
-        "intelliSenseMode": "clang-x64",
+        "intelliSenseMode": "macos-clang-x64",
         "includePath": ["${myDefaultIncludePath}"],
         "macFrameworkPath": [
           "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"

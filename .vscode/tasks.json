@@ -9,13 +9,16 @@
             "command": "g++",
             "windows": {
                 "args": [
-                    "-g", 
+                    "-g",
                     "-std=c++17",
                     "-IVMIGameEngine/include",
                     "-IVMIGameEngine/include/VMIGame",
-                    "${relativeFileDirname}/*.cpp", 
-                    "-o", "${relativeFileDirname}/build/${relativeFileDirname}.exe", 
-                    "-lsfml-graphics", "-lsfml-window", "-lsfml-system"
+                    "${relativeFileDirname}/*.cpp",
+                    "-o",
+                    "${relativeFileDirname}/build/${relativeFileDirname}.exe",
+                    "-lsfml-graphics",
+                    "-lsfml-window",
+                    "-lsfml-system"
                 ]
             },
             "osx": {
@@ -25,14 +28,19 @@
                     "-IVMIGameEngine/include",
                     "-IVMIGameEngine/include/VMIGame",
                     "${relativeFileDirname}/*.cpp",
-                    "-o", "${relativeFileDirname}/build/${relativeFileDirname}",
-                    "-lsfml-graphics", "-lsfml-window", "-lsfml-system"
+                    "-o",
+                    "${relativeFileDirname}/build/${relativeFileDirname}",
+                    "-lsfml-graphics",
+                    "-lsfml-window",
+                    "-lsfml-system"
                 ]
             },
             "options": {
                 "cwd": "${workspaceFolder}"
             },
-            "problemMatcher": ["$gcc"],
+            "problemMatcher": [
+                "$gcc"
+            ],
             "dependsOrder": "sequence",
             "dependsOn": "Create build directory",
             "group": {

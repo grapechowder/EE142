@@ -8,11 +8,15 @@
 		"terminal.integrated.profiles.windows": {
 			"bash" : {
 				"path" : "c:/msys64/usr/bin/bash.exe"
-			}
+			},
+			"PowerShell" : null,
+			"Git Bash" : null,
+			"Command Prompt" : null,
+			"JavaScript Debug Terminal" : null
 		},
 		"terminal.integrated.defaultProfile.windows": "bash",
 		"terminal.integrated.env.windows": {
-			"path": "/mingw64/bin:/usr/bin"
+			"path": "/ucrt64/bin:/usr/bin"
 		},
 		"files.autoSave": "afterDelay",
 	},
