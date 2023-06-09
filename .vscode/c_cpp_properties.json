@@ -10,6 +10,7 @@
       {
         "name": "Win32",
         "intelliSenseMode": "windows-gcc-x64",
+        "compilerPath": "c:/msys64/ucrt64/bin/g++",
         "includePath": ["${myDefaultIncludePath}"],
         "cStandard": "c11",
         "cppStandard": "c++17",
@@ -22,7 +23,8 @@
       },
       {
         "name": "Mac",
-        "intelliSenseMode": "macos-clang-x64",
+        "intelliSenseMode": "macos-gcc-x64",
+        "compilerPath": "/usr/bin/g++",
         "includePath": ["${myDefaultIncludePath}"],
         "macFrameworkPath": [
           "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"

@@ -10,9 +10,6 @@
             "request": "launch",
             "program": "${fileDirname}/build/${relativeFileDirname}",
             "windows": {
-                "name": "Launch",
-                "type": "cppdbg",
-                "request": "launch",
                 "program": "${fileDirname}/build/${relativeFileDirname}.exe",
                 "MIMode": "gdb",
                 "miDebuggerPath": "c:/msys64/ucrt64/bin/gdb.exe",
@@ -25,9 +22,6 @@
                 ]
             },
             "osx": {
-                "name": "Launch",
-                "type": "cppdbg",
-                "request": "launch",
                 "program": "${fileDirname}/build/${relativeFileDirname}",
                 "MIMode": "lldb",
             },
