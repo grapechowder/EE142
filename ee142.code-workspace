@@ -29,6 +29,7 @@
 		"unwantedRecommendations": [
 			"twxs.cmake",
 			"ms-vscode.cmake-tools",
+			"ms-vscode.cpptools-extension-pack"
 		]
 	}
 }
