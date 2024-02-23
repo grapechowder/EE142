@@ -7,7 +7,12 @@
 	"settings": {
 		"terminal.integrated.profiles.windows": {
 			"bash" : {
-				"path" : "c:/msys64/usr/bin/bash.exe"
+				"path" : "c:/msys64/usr/bin/bash.exe",
+				"env" : {
+					"MSYSTEM" : "UCRT64",
+					"CHERE_INVOKING" : "1",
+					"MSYS2_PATH_TYPE" : "inherit"
+				}
 			},
 			"PowerShell" : null,
 			"Git Bash" : null,
