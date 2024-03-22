@@ -16,6 +16,7 @@
 
 #include <string>
 
+
 namespace sf
 {
 	typedef std::string String;

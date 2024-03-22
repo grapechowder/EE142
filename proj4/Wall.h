@@ -18,6 +18,8 @@ public:
 	// Getter
 	const vmi::Vector2d getNormal() const;
 
+	
+
 private:
 	vmi::Vector2d n;				// normal vector pointing away from wall
 };

@@ -26,7 +26,7 @@ Wall::Wall(const Vector2d& ul, const Vector2d& lr, const Vector2d& normal)
 	polygon->addPoint(Vector2d(0, height - 1));
 
 	// make the wall yellow
-	polygon->setFill(Color::Yellow);
+	polygon->setFill(Color::White);
 }
 
 

@@ -1,1 +1,0 @@
-Copy your files from the proj2/ directory here to use as a starting point.

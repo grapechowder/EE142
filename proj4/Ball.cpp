@@ -9,6 +9,7 @@
 
 #include "Ball.h"
 #include "Wall.h"
+#include "Paddle.h"
 using namespace vmi;
 
 
@@ -26,7 +27,7 @@ Ball::Ball() : MovingThing(Vector2d(),  // position
 	polygon->addPoint(Vector2d(9, 0));
 	polygon->addPoint(Vector2d(9, 9));
 	polygon->addPoint(Vector2d(0, 9));
-	polygon->setFill(Color::White);
+	polygon->setFill(Color::Yellow);
 }
 
 
@@ -44,6 +45,11 @@ void Ball::handleCollision(const Thing* other)
 	if (typeid(*other) == typeid(Wall)) {
 		// bounce off the wall
 		bounce(dynamic_cast<const Wall*>(other)->getNormal());
+	}
+	else if((typeid(*other) == typeid(Paddle)))
+	{
+		bounce(dynamic_cast<const Paddle*>(other)->getNormal());
+	
 	}
 
 	// otherwise, ignore the collision
